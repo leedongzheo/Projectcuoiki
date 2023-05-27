@@ -2,7 +2,7 @@ streamlit
 pandas==1.5.0
 tensorflow==2.8.0
 keras==2.6.0
-opencv-python==4.7.0.68
+opencv-python
 opencv-contrib-python==4.7.0.68
 streamlit_webrtc
 opencv-python-headless
