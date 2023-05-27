@@ -1,7 +1,2 @@
 streamlit
-pandas==1.5.0
-tensorflow==2.8.0
-keras==2.6.0
-opencv-python
-streamlit_webrtc
 opencv-python-headless
