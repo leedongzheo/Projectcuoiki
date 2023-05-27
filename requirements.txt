@@ -1,3 +1,4 @@
+joblib
 streamlit
 opencv-python-headless
 tensorflow
