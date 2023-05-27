@@ -6,7 +6,7 @@ st.set_page_config(
     page_icon="👋",
 )
 
-st.write("<h1 style='font-size: 50px;color:black'>Welcome to the website of Nguyen Tran Anh Th! 👋</h1>", unsafe_allow_html=True)
+st.write("<h1 style='font-size: 50px;color:black'>Welcome to the website of Nguyen Tran Anh Thu! 👋</h1>", unsafe_allow_html=True)
 st.sidebar.success("You can choose one of my projects above.")
 
 
