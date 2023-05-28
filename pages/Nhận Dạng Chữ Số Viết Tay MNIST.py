@@ -32,12 +32,7 @@ def add_bg_from_local(image_file):
     unsafe_allow_html=True
     )
 add_bg_from_local('Background/MNIST.jpg')  
-uploaded_file = st.file_uploader(
-    "Choose your database", accept_multiple_files=False)
-if uploaded_file is not None:
-    file_name = uploaded_file
-else:
-    file_name = "DatabaseSample.xlsx"
+
 model_architecture = "ModelNhanDangChuSoVietTayMNIST\\digit_config.json"
 model_weights = "ModelNhanDangChuSoVietTayMNIST\\digit_weight.h5"
 model = model_from_json(open(model_architecture).read())
@@ -88,7 +83,8 @@ def recognize_digits(index, image):
     return s
 
 def main():
-	
+    file_uploaded = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png", "tif"])
+
     st.title('Nhan dang chu so viet tay')
     #st.geometry('520x550')
     if 'index' not in st.session_state:
@@ -98,7 +94,7 @@ def main():
 
     btn_tao_anh = st.button('Tao anh')
    
-    if btn_tao_anh:
+    if file_uploaded is not None:
         image = Image.open(create_random_image())
         st.image(image, width=421)
         result = recognize_digits(st.session_state.index, st.session_state.image_path)
