@@ -5,7 +5,7 @@ import cv2
 import sys
 import os
 import tensorflow as tf
-sys.path.append('pages/ABC')
+sys.path.append('pages')
 from object_detection.utils import config_util
 from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as viz_utils
@@ -87,13 +87,13 @@ def XoaTrung(a, L):
 
 st.subheader('Nhận dạng trái cây')
 
-with open("test.zip", "rb") as fp:
-    btn = st.download_button(
-        label="Download ZIP",
-        data=fp,
-        file_name="ModelNhanDangTraiCay/test.zip",
-        mime="application/zip"
-    )
+# with open("test.zip", "rb") as fp:
+#     btn = st.download_button(
+#         label="Download ZIP",
+#         data=fp,
+#         file_name="ModelNhanDangTraiCay/test.zip",
+#         mime="application/zip"
+#     )
 
 FRAME_WINDOW = st.image([])
 
