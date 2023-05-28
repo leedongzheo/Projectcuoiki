@@ -32,7 +32,12 @@ def add_bg_from_local(image_file):
     unsafe_allow_html=True
     )
 add_bg_from_local('Background/MNIST.jpg')  
-
+uploaded_file = st.file_uploader(
+    "Choose your database", accept_multiple_files=False)
+if uploaded_file is not None:
+    file_name = uploaded_file
+else:
+    file_name = "DatabaseSample.xlsx"
 model_architecture = "ModelNhanDangChuSoVietTayMNIST\\digit_config.json"
 model_weights = "ModelNhanDangChuSoVietTayMNIST\\digit_weight.h5"
 model = model_from_json(open(model_architecture).read())
