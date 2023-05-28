@@ -2,4 +2,3 @@ joblib
 streamlit
 opencv-python-headless
 tensorflow
-matplotplib==3.1.3
