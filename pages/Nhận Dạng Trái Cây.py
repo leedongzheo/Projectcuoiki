@@ -5,7 +5,7 @@ import cv2
 import sys
 import os
 import tensorflow as tf
-sys.path.append('pages/object_detection')
+sys.path.append('pages/ABC')
 from object_detection.utils import config_util
 from object_detection.utils import label_map_util
 from object_detection.utils import visualization_utils as viz_utils
