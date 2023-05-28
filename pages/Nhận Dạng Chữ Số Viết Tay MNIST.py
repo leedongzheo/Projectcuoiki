@@ -83,7 +83,7 @@ def recognize_digits(index, image):
     return s
 
 def main():
-    file_uploaded = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png", "tif"])
+ 
 
     st.title('Nhan dang chu so viet tay')
     #st.geometry('520x550')
@@ -94,7 +94,7 @@ def main():
 
     btn_tao_anh = st.button('Tao anh')
    
-    if file_uploaded is not None:
+    if btn_tao_anh:
         image = Image.open(create_random_image())
         st.image(image, width=421)
         result = recognize_digits(st.session_state.index, st.session_state.image_path)
