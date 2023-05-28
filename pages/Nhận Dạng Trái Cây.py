@@ -86,13 +86,13 @@ def XoaTrung(a, L):
 
 st.subheader('Nhận dạng trái cây')
 
-# with open("test.zip", "rb") as fp:
-#     btn = st.download_button(
-#         label="Download ZIP",
-#         data=fp,
-#         file_name="ModelNhanDangTraiCay/test.zip",
-#         mime="application/zip"
-#     )
+with open("test.zip", "rb") as fp:
+    btn = st.download_button(
+        label="Download ZIP",
+        data=fp,
+        file_name="ModelNhanDangTraiCay/test.zip",
+        mime="application/zip"
+    )
 
 FRAME_WINDOW = st.image([])
 
