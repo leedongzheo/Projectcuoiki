@@ -33,8 +33,8 @@ def add_bg_from_local(image_file):
     )
 add_bg_from_local('Background/MNIST.jpg')  
 
-model_architecture = "ModelNhanDangChuSoVietTayMNIST\\digit_config.json"
-model_weights = "ModelNhanDangChuSoVietTayMNIST\\digit_weight.h5"
+model_architecture = "digit_config.json"
+model_weights = "digit_weight.h5"
 model = model_from_json(open(model_architecture).read())
 model.load_weights(model_weights) 
 
@@ -61,8 +61,8 @@ def create_random_image():
         m = i // 15
         n = i % 15
         digit_random[m*28:(m+1)*28, n*28:(n+1)*28] = X_test_image[st.session_state.index[i]] 
-    cv2.imwrite('ModelNhanDangChuSoVietTayMNIST\\digit_random.jpg', digit_random)
-    return 'ModelNhanDangChuSoVietTayMNIST\\digit_random.jpg'
+    cv2.imwrite('digit_random.jpg', digit_random)
+    return 'digit_random.jpg'
 
 
 #@st.cache
